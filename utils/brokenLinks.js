@@ -25,6 +25,7 @@ async function getBrokenLinks({ url }) {
     $("a").each((index, element) => {
       const href = $(element).attr("href");
       if (href) {
+        console.log(href);
         // Check if the href is an absolute URL or a relative path
         if (href.startsWith("http") || href.startsWith("https")) {
           uniqueSitemapUrls.add(href);
